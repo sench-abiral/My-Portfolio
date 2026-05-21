@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Abiral Senchuri — Computing Science Student & Frontend Developer</title>
+  <meta name="description" content="Portfolio of Abiral Senchuri — Computing Science student at Coventry University and frontend developer. Available for internships, freelance, and junior roles." />
+  <meta name="keywords" content="Abiral Senchuri, frontend developer, computing science, Coventry University, web developer, London, portfolio" />
+  <meta name="author" content="Abiral Senchuri" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abiral Senchuri — Frontend Developer Portfolio" />
+  <meta property="og:description" content="A passionate Computing Science student building modern web experiences." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons (loaded from CDN) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Font Awesome (for social brand icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-spinner"></div>
+    <h2 class="loader-text gradient-text">Loading Portfolio</h2>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ===== Scroll progress ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">Abiral<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon" id="themeIcon"></i>
+        </button>
+        <a href="#" class="btn-primary hire-btn" id="hireMeBtn">
+          <i data-lucide="sparkles"></i>
+          Hire Me
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="btn-primary hire-btn-mobile">
+        <i data-lucide="sparkles"></i> Hire Me
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Floating side socials (desktop) ===== -->
+  <aside class="side-socials">
+    <a href="https://github.com/sench-abiral" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i><span class="social-label">GitHub</span></a>
+    <a href="#" target="_blank" aria-label="LinkedIn" data-social="linkedin"><i class="fa-brands fa-linkedin"></i><span class="social-label">LinkedIn</span></a>
+    <a href="#" target="_blank" aria-label="Instagram" data-social="instagram"><i class="fa-brands fa-instagram"></i><span class="social-label">Instagram</span></a>
+    <a href="#" target="_blank" aria-label="Facebook" data-social="facebook"><i class="fa-brands fa-facebook"></i><span class="social-label">Facebook</span></a>
+    <a href="#" target="_blank" aria-label="TikTok" data-social="tiktok"><i class="fa-brands fa-tiktok"></i><span class="social-label">TikTok</span></a>
+    <a href="#" target="_blank" aria-label="X (Twitter)" data-social="twitter"><i class="fa-brands fa-x-twitter"></i><span class="social-label">Twitter</span></a>
+    <a href="mailto:senchuriabiral758@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i><span class="social-label">Email</span></a>
+    <div class="side-line"></div>
+  </aside>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="grid-bg"></div>
+      <div class="hero-glow hero-glow-left"></div>
+      <div class="hero-glow hero-glow-right"></div>
+      <div class="particles" id="particles"></div>
+
+      <div class="hero-inner">
+        <div class="hero-text reveal">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Available for freelance &amp; internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Abiral</span>.
+            <span class="hero-subtitle">A passionate</span>
+            <span class="typing-row"><span class="gradient-text typing-text" id="typingText"></span><span class="typing-cursor"></span></span>
+          </h1>
+
+          <p class="hero-tagline">
+            Turning ideas into real-world digital experiences. Computing Science student at Coventry University, stepping into the professional tech world — driven by innovation, learning, and real-world impact.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary hire-btn">
+              <i data-lucide="sparkles"></i> Hire Me
+            </a>
+            <button class="btn-ghost" id="openChatbotBtn">
+              <i data-lucide="message-square"></i> Chat With My AI
+            </button>
+            <a href="#projects" class="btn-ghost">
+              <i data-lucide="eye"></i> View Projects
+            </a>
+            <a href="resume.pdf" download class="btn-ghost">
+              <i data-lucide="download"></i> Resume
+            </a>
+          </div>
+
+          <div class="trust-badges">
+            <div class="trust-badge"><i data-lucide="check-circle" style="color:#10B981"></i> Open to Work</div>
+            <div class="trust-badge"><i data-lucide="briefcase" style="color:#06B6D4"></i> Internship Ready</div>
+            <div class="trust-badge"><i data-lucide="graduation-cap" style="color:#EC4899"></i> CU London Student</div>
+          </div>
+
+        </div>
+
+        <div class="hero-avatar reveal">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <img src="my-photo.jpg" alt="Abiral Senchuri" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');" />
+          </div>
+          <div class="float-chip chip-1">💻 Coding</div>
+          <div class="float-chip chip-2">🎨 Designing</div>
+          <div class="float-chip chip-3">🚀 Learning</div>
+        </div>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat-card"><div class="stat-value gradient-text">6+</div><div class="stat-label">Projects Built</div></div>
+        <div class="stat-card"><div class="stat-value gradient-text">10+</div><div class="stat-label">Technologies</div></div>
+        <div class="stat-card"><div class="stat-value gradient-text">2</div><div class="stat-label">Years Coding</div></div>
+        <div class="stat-card"><div class="stat-value gradient-text">100%</div><div class="stat-label">Recruiter Friendly</div></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <div class="overline">About Me</div>
+        <h2>Building my <span class="gradient-text">path</span> in tech</h2>
+        <p class="section-desc">A passionate Computing Science student transitioning from coursework to real-world product building.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass about-card reveal">
+          <h3 class="about-title">Hey, I'm <span class="gradient-text">Abiral Senchuri</span> 👋</h3>
+          <p>
+            I'm a passionate Computing Science student at CU London (Dagenham Campus), currently in my first year and transitioning from academic projects into the real world of software engineering.
+          </p>
+          <p>
+            I love the moment when a design idea becomes a working interface — that's where my obsession with frontend development started. Outside coursework, I build small projects, learn React, explore UI/UX in Figma, and experiment with AI tools to ship faster and smarter.
+          </p>
+          <p>
+            I'm actively seeking my first internship in software engineering, web development, or game development — and I'm open to freelance opportunities and startup collaborations.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Growth mindset</span>
+            <span class="tag">Problem solver</span>
+            <span class="tag">Team player</span>
+            <span class="tag">Detail-obsessed</span>
+            <span class="tag">Always learning</span>
+          </div>
+        </div>
+
+        <div class="about-info-grid">
+          <div class="glass info-card reveal">
+            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+            <div class="info-label">Based in</div>
+            <div class="info-value">London, UK</div>
+          </div>
+          <div class="glass info-card reveal">
+            <div class="info-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="info-label">Studying</div>
+            <div class="info-value">BSc Computing Science</div>
+          </div>
+          <div class="glass info-card reveal">
+            <div class="info-icon"><i data-lucide="languages"></i></div>
+            <div class="info-label">Speaks</div>
+            <div class="info-value">English, Nepali, Hindi</div>
+          </div>
+          <div class="glass info-card reveal">
+            <div class="info-icon"><i data-lucide="heart"></i></div>
+            <div class="info-label">Loves</div>
+            <div class="info-value">Frontend &amp; Game Dev</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <div class="overline">Skills</div>
+        <h2>Tools I <span class="gradient-text">build</span> with</h2>
+        <p class="section-desc">A growing toolbox of languages, frameworks, and design tools.</p>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="section-heading reveal">
+        <div class="overline">Selected Work</div>
+        <h2>Things I've <span class="gradient-text">built</span></h2>
+        <p class="section-desc">From cybersecurity games to design concepts — a glimpse of how I learn by building.</p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE TIMELINE ===== -->
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <div class="overline">Journey</div>
+        <h2>My <span class="gradient-text">path</span> so far</h2>
+        <p class="section-desc">A growing timeline of education, projects, and self-driven learning.</p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section" id="certifications">
+      <div class="section-heading reveal">
+        <div class="overline">Credentials</div>
+        <h2>Certifications &amp; <span class="gradient-text">learning</span></h2>
+        <p class="section-desc">Continuous learning is at the core of how I work.</p>
+      </div>
+
+      <div class="certs-grid" id="certsGrid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+      <div class="section-heading reveal">
+        <div class="overline">Services</div>
+        <h2>What I can <span class="gradient-text">build</span> for you</h2>
+        <p class="section-desc">From quick landing pages to full portfolio sites — open to freelance and collaborative work.</p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section" id="testimonials">
+      <div class="section-heading reveal">
+        <div class="overline">Kind Words</div>
+        <h2>What people <span class="gradient-text">say</span></h2>
+        <p class="section-desc">A few words from teammates, peers, and early clients.</p>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="section-heading reveal">
+        <div class="overline">Get in touch</div>
+        <h2>Let's work <span class="gradient-text">together</span></h2>
+        <p class="section-desc">Open to internships, freelance projects, and friendly intros. The fastest way to reach me is email.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <div class="glass contact-details">
+            <h3>Contact details</h3>
+            <ul>
+              <li>
+                <i data-lucide="mail"></i>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <a href="mailto:senchuriabiral758@gmail.com">senchuriabiral758@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="phone"></i>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <a href="tel:+447771831697">+44 7771831697</a>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div>London, United Kingdom</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button class="glass action-row" id="copyEmailBtn">
+            <div class="action-icon"><i data-lucide="copy" id="copyIcon"></i></div>
+            <div class="action-text">
+              <div class="action-title" id="copyTitle">Copy email</div>
+              <div class="action-sub">senchuriabiral758@gmail.com</div>
+            </div>
+          </button>
+
+          <a href="https://wa.me/447771831697" target="_blank" class="glass action-row whatsapp-row">
+            <div class="action-icon whatsapp-icon"><i data-lucide="message-circle"></i></div>
+            <div class="action-text">
+              <div class="action-title">Chat on WhatsApp</div>
+              <div class="action-sub">Usually replies within hours</div>
+            </div>
+          </a>
+        </div>
+
+        <form class="glass contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Your name</label>
+              <input type="text" name="name" required placeholder="Jane Doe" />
+            </div>
+            <div class="form-field">
+              <label>Your email</label>
+              <input type="email" name="email" required placeholder="jane@company.com" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Message</label>
+            <textarea name="message" rows="6" required placeholder="Tell me about your project, role, or idea..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            <i data-lucide="send"></i> Send Message
+          </button>
+          <p class="form-note">This opens your email client with the message pre-filled. No data is stored.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <span class="logo-text">Abiral Senchuri</span>
+        </div>
+        <p class="footer-tagline">Computing Science Student &amp; Frontend Developer. Based in London, UK.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a href="https://github.com/sench-abiral" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" target="_blank" aria-label="LinkedIn" data-social="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" target="_blank" aria-label="Instagram" data-social="instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook" data-social="facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" target="_blank" aria-label="TikTok" data-social="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" target="_blank" aria-label="X (Twitter)" data-social="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Messenger" data-social="messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+          <a href="https://wa.me/447771831697" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:senchuriabiral758@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Abiral Senchuri. All rights reserved.</p>
+      <p>Crafted with <i data-lucide="heart" style="color:#EC4899; width:12px; height:12px;"></i> using HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- ===== Scroll-to-top ===== -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- ===== Chatbot ===== -->
+  <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Open chatbot">
+    <i data-lucide="message-square" id="chatLauncherIcon"></i>
+    <span class="online-dot"></span>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar"><i data-lucide="bot"></i></div>
+      <div>
+        <div class="chatbot-name">Abiral's AI <i data-lucide="sparkles" style="width:12px; height:12px; color:#06B6D4;"></i></div>
+        <div class="chatbot-status"><span class="online-pulse"></span> Online</div>
+      </div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbotMessages">
+      <!-- Messages injected by JS -->
+    </div>
+
+    <div class="chatbot-suggestions" id="chatbotSuggestions">
+      <button class="suggestion-chip" data-q="What are your skills?">What are your skills?</button>
+      <button class="suggestion-chip" data-q="Tell me about your projects">Tell me about your projects</button>
+      <button class="suggestion-chip" data-q="Are you available for internships?">Available for internships?</button>
+    </div>
+
+    <form class="chatbot-input" id="chatbotForm">
+      <input type="text" id="chatbotInput" placeholder="Ask me anything..." autocomplete="off" />
+      <button type="submit" aria-label="Send"><i data-lucide="send"></i></button>
+    </form>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
