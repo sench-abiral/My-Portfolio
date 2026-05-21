@@ -19,6 +19,7 @@ A personal portfolio website built using plain HTML, CSS, and JavaScript.
 - `styles.css` → styling
 - `script.js` → functionality
 - `data.js` → portfolio data
+- `favicon.svg` → website tab icon
 
 ## Run Locally
 Just open `index.html` in your browser.
